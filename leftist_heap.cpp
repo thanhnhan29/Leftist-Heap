@@ -35,6 +35,7 @@ void insert(LeftistHeap* &p, int k) {
 }
 
 void deleteMin(LeftistHeap* &p) {
+    if(p==NULL) return;
     LeftistHeap* oldRoot = p;
     p = merge(p->left, p->right);
     delete oldRoot;
